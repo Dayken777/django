@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Авторы</title>
+{% endblock %}
+{% block content %}
+        <div class="catalog">
+        {% for author in authors %}
+            <div class="card_book">
+                <img class="img_catalog" src="../../static/img/{{author.img}}" alt="..." width="190" height="220" loading="lazy">
+                <div class="information_book">
+                    <div class="title">{{author.full_name}}</div>
+                    <p class="author">Годы жизни:</p>
+                    <p class="author">{{author.date_birth}}<br>{% if author.date_death != none %} {{author.date_death}} {% else %} По сей день {% endif %}</p>
+                    <a href="/catalog/author/{{author.id}}"><button>Подробнее</button></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}

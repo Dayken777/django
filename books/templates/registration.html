@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Регистрация</title>
+{% endblock %}
+{% block content %}
+<div class="registration_form">
+    <legend>Регистрация</legend>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">Email</label>
+        <input id="Ф.И.О." name="email" type="email" placeholder="Email" required>
+        <label for="">Имя</label>
+        <input required name="name" type="text" placeholder="Ф.И.О." pattern="[А-Яа-я]*?\s[А-Яа-я]*?\s[А-Яа-я]*"
+         title="Поле должно содержать ваши фамилию, имя и отчество на русском языке.">
+        <label for="">Пароль</label>
+        <input name="password" type="password" placeholder="Пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Поле должно содержать по крайней мере одну цифру и по одной прописной и строчной букве, а также не менее 8 или более символов." required>
+        <label for="">Подтвердите пароль</label>
+        <input required name='valid_pass' type="password" placeholder="Подтвердите пароль">
+        {% if error == 1 %}
+        <span class="error">Пароли не совпадают</span>
+        {% endif %}
+        {% if error == 2 %}
+        <span class="error">Такой email уже зарегистрирован</span>
+        {% endif %}
+        <input class="submit" type="submit" value="Зарегистрироваться">
+    </form>
+</div>
+{% endblock %}

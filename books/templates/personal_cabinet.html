@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Профиль</title>
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="profile_block"><br>
+        <h2 id="information_title">Общая информация</h2>
+        <ul>
+            <li>Email: {{email}}</li>
+            <li>Ф.И.О.: {{first_name}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,60 @@
+.registration_form{
+    width:70%;
+    height: 500px;
+    margin: 7% auto 100px auto;
+    border:1px solid gray;
+    border-radius: 8px;
+}
+span.error{
+    color: white;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size:14px;
+    padding:5px;
+    border-radius: 4px;
+    background: rgba(217, 35, 35, 0.84);
+}
+.auth_form{
+    width:70%;
+    height: 350px;
+    margin: 10% auto 170px auto;
+    border:1px solid gray;
+    border-radius: 8px;
+}
+label{
+    display:block;
+    margin-bottom:4px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size:14px;
+}
+.submit{
+    width: 45%;
+    height: 45px;
+    margin:30px auto 0 ;
+    border:none;
+    color:white;
+    font-size:15px;
+    background-image: linear-gradient(315deg, #2e74ff 0%, #6616c1 130%);
+    cursor: pointer;
+    transition-property: background-image;
+    transition-duration: 22s;
+}
+.submit:hover{
+    background-image: linear-gradient(-315deg, #2e74ff 0%, #6616c1 130%);
+}
+legend{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size:18px;
+    margin:20px 0 0 20px;
+}
+form{
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    margin: 30px auto 0 ;
+}
+form input{
+    padding: 10px 10px;
+    border-radius: 5px;
+    border:1px solid gray;
+    margin-bottom: 20px;
+}

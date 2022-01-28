@@ -1,0 +1,44 @@
+
+.book_block{
+    width:80%;
+    height: 552px;
+    margin:100px auto;
+    border-radius:5px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    background: #ffffff;
+}
+.img_book  {
+    margin: 10px 20px;
+}
+.container_book{
+    display:flex;
+    flex-direction:row;
+}
+
+.container_book p.author {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    color:#424242;
+}
+.col1{
+    width:15%;
+    border-right:1px solid gray;
+    margin-right:15px;
+}
+.col2{
+    width:15%;
+    border-right:1px solid gray;
+    margin-right:15px;
+}
+.col3{
+    width:40%
+}
+.col{
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+}
+.col p{
+    margin: 0 auto;
+}

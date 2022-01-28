@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}
+<title>{{author.full_name}}</title>
+{% endblock %}
+{% block content %}
+<div class="wrapper_book">
+    <div class="book_block"><br>
+        <h2 id="information_title">{{author.full_name}}</h2><br><br>
+        <div class="container_book">
+        <div class="col">
+        <img class="img_book" src="../../static/img/{{author.img}}" alt="..." width="190" height="250" loading="lazy">
+        <p class="author">{{author.date_birth}}{% if author.date_death != none %} {{author.date_death}} {% else %} По сей день {% endif %}</p>
+        </div>
+        <div class="col">
+        <p class="author"><b>Краткая биография:</b><br><br>
+            {{author.description}}
+        </p><br><br>
+            <a style="width:230px; margin:0 auto;" href="{% url 'author' %}"><button style="width:230px; margin:0 auto;">Вернуться назад</button></a>
+        </div>
+        <div class="col">
+
+
+        </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

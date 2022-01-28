@@ -1,0 +1,19 @@
+
+.profile_block{
+    width:80%;
+    height: 352px;
+    margin:100px auto;
+    border-radius:5px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    background: #ffffff;
+}
+h2#information_title{
+    margin: 10px 20px;
+}
+.profile_block ul li {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    list-style: none;
+    margin-top: 40px;
+}

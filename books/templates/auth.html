@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Авторизация</title>
+{% endblock %}
+{% block content %}
+<div class="auth_form">
+    <legend>Авторизация</legend>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">Email</label>
+        <input name="email" type="text" placeholder="Email">
+        <label for="">Пароль</label>
+        <input name="password" type="password" placeholder="Пароль">
+        {% if error == 1 %}
+        <span class="error">Не верный логин или пароль!</span>
+        {% endif %}
+        <input class="submit" type="submit" value="Авторизироваться">
+    </form>
+</div>
+{% endblock %}

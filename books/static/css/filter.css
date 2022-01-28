@@ -1,0 +1,60 @@
+.filter nav {
+        margin: 100px 0;
+        background-image: linear-gradient(315deg, #2e74ff 0%, #2e74ff 130%);
+    }
+
+    /* убираем отступы и поля, а также list-style для "ul",
+     * и добавляем "position:relative" */
+.filter	nav ul {
+        padding:0;
+        margin:0;
+        list-style: none;
+        position: relative;
+        font-size:11px;
+        }
+
+    /* применяем inline-block позиционирование к элементам навигации */
+.filter	nav ul li {
+        margin: 0px -7px 0 0;
+        display:inline-block;
+        background-color: #2e74ff;
+        position: relative;
+        z-index: 22;
+        font-size:11px;
+        }
+
+    /* стилизуем ссылки */
+.filter	nav a {
+        display:block;
+        padding:0 10px;
+        color:#FFF;
+        font-size:20px;
+        line-height: 40px;
+        text-decoration:none;
+        transition: .2s;
+        font-size:14px;
+    }
+
+    /* изменяем цвет фона при наведении курсора */
+.filter	nav a:hover {
+        background-color: #3569d0;
+        transition: .2s;
+}
+.filter nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+    }
+
+    /* отображаем выпадающий список при наведении */
+.filter	nav ul li:hover > ul {
+        display:inherit;
+    }
+
+    /* первый уровень выпадающего списка */
+.filter nav ul ul li {
+        min-width:170px;
+        float:none;
+        display:list-item;
+        position: relative;
+    }

@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Арендованные экземпляры</title>
+{% endblock %}
+{% block content %}
+ <div class="catalog">
+            {% for bookinstance in bookinstance_sold %}
+            <div class="card_book">
+                <img class="img_catalog" src="../../static/{{book.image}}" alt="..." width="190" height="290" loading="lazy">
+                <div class="information_book">
+                    <div class="title">{{book.name}}</div>
+                    <p class="author"><b>Дата возврата: </b> <br>{{bookinstance.date_back}}</p>
+                    <p class="author"><b>Язык(и):</b></p>
+                    {% for language in book.language_id.all %}
+                        <p class="author">{{ language.name }}</p>
+                    {% endfor %}
+                    <a href="/catalog/book/{{book.id}}"><button>Подробнее</button></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}
